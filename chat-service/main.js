@@ -1,3 +1,5 @@
+const API_URL = ""
+
 document.addEventListener('DOMContentLoaded', () => {
   const messageContainer = document.getElementById('message-container');
   const inputText = document.getElementById('input-text');
@@ -16,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMessages();
 
     try {
-    //   const response = await axios.post('YOUR_BACKEND_API_URL', { text });
-      const botMessage = { text: "Response from bot", sender: 'bot' };
+    //   const response = await axios.post(API_URL, { text });
+      const response = "Response from bot"
+      const botMessage = { text: response, sender: 'bot' };
       messages.push(botMessage);
       renderMessages();
     } catch (error) {
